@@ -2,374 +2,221 @@
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta
+      name="keywords"
+      content="Yadav Stones, Crushed Stone Manufacturers, Hubli, Construction Aggregates"
+    />
+    <meta
+      name="description"
+      content="Yadav Stones - Leading manufacturers of crushed stone and construction materials in Hubli since 2001. Fully licensed and compliant with DGMS & KSPCB regulations."
+    />
+    <meta name="author" content="Yadav Stones" />
 
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+    <title>About Us - Yadav Stones</title>
+    <!-- bootstrap core css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/bootstrap.css' %}"
+    />
 
-  <title>Yadav Stone</title>
-<!-- bootstrap core css -->
-<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-<!-- fonts style -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- owl slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
 
-<!-- owl slider stylesheet -->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- font awesome style -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/font-awesome.min.css' %}"
+    />
 
-<!-- font awesome style -->
-<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
+    <!-- Custom styles for this template -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
 
-<!-- Custom styles for this template -->
-<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <!-- responsive style -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/responsive.css' %}"
+    />
 
-<!-- responsive style -->
-<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+    <style>
+      /* Animation Styles */
+      .detail-box {
+        position: relative;
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 1s ease-out;
+      }
 
+      .first-slide {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
 
-  <style>
-    /* Slide from left to right */
-    .detail-box {
-            position: relative;
-            opacity: 0;
-            transition: transform 1s ease-out, opacity 1s ease-out;
-        }
+      .slide-right {
+        transform: translateX(100%);
+      }
 
-        /* First About Us (Auto Slide-in on Load) */
-        .first-slide {
-            transform: translateX(-100%);
-            opacity: 0;
-        }
+      .slide-left-again {
+        transform: translateX(-100%);
+      }
 
-        /* Second About Us (Right to Left) */
-        .slide-right {
-            transform: translateX(100%);
-        }
+      .show {
+        transform: translateX(0);
+        opacity: 1;
+      }
 
-        /* Third About Us (Left to Right Again) */
-        .slide-left-again {
-            transform: translateX(-100%);
-        }
+      /* Enhanced Styles */
+      .company-logo {
+        max-height: 120px;
+        margin-bottom: 20px;
+      }
 
-        /* Show class to animate */
-        .show {
-            transform: translateX(0);
-            opacity: 1;
-        }
+      .title-divider {
+        height: 3px;
+        width: 100px;
+        background: #f0b913;
+        margin: 15px auto;
+      }
 
+      .stat-card {
+        border-radius: 8px;
+        padding: 20px 10px;
+        text-align: center;
+        transition: all 0.3s ease;
+        background: #f8f9fa;
+        height: 100%;
+      }
 
-  </style>
+      .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
 
-</head>
+      .stat-icon {
+        font-size: 2.5rem;
+        color: #f0b913;
+        margin-bottom: 10px;
+      }
 
-<body class="sub_page">
+      .section-title {
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+      }
 
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="header_top">
-        <div class="container-fluid header_top_container">
-          <div class="lang_box dropdown">
-            <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
-              <img src="images/flag-uk.png" alt="flag" class=" " title="United Kingdom"> <i class="fa fa-angle-down " aria-hidden="true"></i>
-              English
-            </a>
-            <div class="dropdown-menu ">
-              <a href="#" class="dropdown-item">
-                <img src="images/flag-india.jpg" class="" alt="flag">
-                Hindi
+      .section-title:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: #f0b913;
+      }
+
+      .commitment-item,
+      .operation-item {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 5px;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .commitment-icon {
+        color: #28a745;
+        margin-right: 10px;
+      }
+
+      .offerings-list li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .offerings-list li i {
+        color: #f0b913;
+        margin-right: 10px;
+      }
+
+      .compliance-badge {
+        background: #f8f9fa;
+        border-left: 4px solid #f0b913;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+
+  <body class="sub_page">
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="header_top">
+          <div class="container-fluid header_top_container">
+            <div class="lang_box dropdown">
+              <a
+                href="#"
+                title="Language"
+                class="nav-link"
+                data-toggle="dropdown"
+                aria-expanded="true"
+              >
+                <img
+                  src="{% static 'images/flag-uk.png' %}"
+                  alt="flag"
+                  class=" "
+                  title="United Kingdom"
+                />
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                English
               </a>
-            </div>
-          </div>
-          <div class="contact_nav">
-            <a href="">
-              <span>
-                📞 Call : +91 996252207
-              </span>
-            </a>
-            <a href="">
-              <span>
-                📧 Email : info@yadavstones.com
-              </span>
-            </a>
-            <a href="">
-              <span>
-                📍 Neeligin Road, Hubli
-              </span>
-            </a>
-          </div>
-          <div class="social_box">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="index.html">
-              <img src="images/logo.jpg" alt="">
-            </a>
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'services' %}">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'about' %}">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'project' %}">Project</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'testimonial' %}">Gallery</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
-                </li>
-              </ul>
-              
-              <!-- <div class="quote_btn-container">
-                <a href="" class="quote_btn">
-                  Get A Quote
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">
+                  <img
+                    src="{% static 'images/flag-india.jpg' %}"
+                    class=""
+                    alt="flag"
+                  />
+                  Hindi
                 </a>
-              </div> -->
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
-
-  <!-- about section -->
-<!-- about section -->
-<section class="about_section layout_padding">
-  <div class="container">
-      <div class="row mb-5">
-          <div class="col-md-12">
-              <div class="detail-box first-slide">
-                  <div class="heading_container text-center">
-                      <img src="images/logo.jpg" alt="Yadav Stones Logo" class="company-logo">
-                      <h1 class="main-title">Yadav Stones</h1>
-                      <div class="title-divider"></div>
-                  </div>
-                  <div class="about-content">
-                      <p class="lead-text">
-                        Established in the year 2001, Yadav Stones in Neeligin Road Hubli, Hubli is a top player in the category Crushed Stone Manufacturers in the Hubli. This well-known establishment acts as a one-stop destination servicing customers both local and from other parts of Hubli. Over the course of its journey, this business has established a firm foothold in it's Industry. The belief that customer satisfaction is as important as their products and services, have helped this establishment garner a vast base of customers, which continues to grow by the day. This business employs individuals that are dedicated towards their respective roles and put in a lot of effort to achieve the common vision and larger goals of the company. In the near future, this business aims to expand its line of products and services and cater to a larger client base. In Hubli, this establishment occupies a prominent location in Neeligin Road Hubli. It is an effortless task in commuting to this establishment as there are various modes of transport readily available. It is at, Near Channama Circle, which makes it easy for first-time visitors in locating this establishment. It is known to provide top service in the following categories: Stone Base Manufacturers, Cement. Block Manufacturers, Crushed Stone Manufacturers
-
-                        Yadav Stones in Neeligin Road Hubli has a wide range of products and/or services to cater to the varied requirements of their customers. The staff at this establishment are courteous and prompt at providing any assistance.
-                      </p>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="row stats-row">
-          <div class="col-md-3 stat-item">
-              <div class="stat-card">
-                  <i class="fa fa-calendar-alt stat-icon"></i>
-                  <h3>22+ Years</h3>
-                  <p>Of Industry Experience</p>
-              </div>
-          </div>
-          <div class="col-md-3 stat-item">
-              <div class="stat-card">
-                  <i class="fa fa-building stat-icon"></i>
-                  <h3>Manufacturers</h3>
-                  <p>Core Business Focus</p>
-              </div>
-          </div>
-          <div class="col-md-3 stat-item">
-              <div class="stat-card">
-                  <i class="fa fa-rupee-sign stat-icon"></i>
-                  <h3>5-10 Lakh</h3>
-                  <p>Annual Turnover</p>
-              </div>
-          </div>
-          <div class="col-md-3 stat-item">
-              <div class="stat-card">
-                  <i class="fa fa-check-circle stat-icon"></i>
-                  <h3>GST Certified</h3>
-                  <p>29AABFY2732JIZX</p>
-              </div>
-          </div>
-      </div>
-
-      <div class="row mt-5">
-          <div class="col-md-6">
-              <div class="detail-box slide-right">
-                  <h2 class="section-title">Our Commitment</h2>
-                  <div class="commitment-list">
-                      <div class="commitment-item">
-                          <i class="fa fa-check commitment-icon"></i>
-                          <div class="commitment-text">
-                              <h4>Quality Assurance</h4>
-                              <p>Premium grade materials meeting industry standards</p>
-                          </div>
-                      </div>
-                      <div class="commitment-item">
-                          <i class="fa fa-check commitment-icon"></i>
-                          <div class="commitment-text">
-                              <h4>Customer Focus</h4>
-                              <p>Dedicated service for local and regional clients</p>
-                          </div>
-                      </div>
-                      <div class="commitment-item">
-                          <i class="fa fa-check commitment-icon"></i>
-                          <div class="commitment-text">
-                              <h4>Expert Team</h4>
-                              <p>Skilled professionals with decades of experience</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          
-          <div class="col-md-6">
-              <div class="detail-box slide-left-again">
-                  <h2 class="section-title">Core Offerings</h2>
-                  <ul class="offerings-list">
-                      <li><i class="fa fa-cube"></i>Crushed Stone Manufacturing</li>
-                      <li><i class="fa fa-cube"></i>Cement Block Production</li>
-                      <li><i class="fa fa-cube"></i>Stone Base Solutions</li>
-                      <li><i class="fa fa-cube"></i>Construction Aggregates</li>
-                  </ul>
-                  <div class="business-details">
-                      <h4 class="details-title">Business Essentials</h4>
-                      <p><strong>Established:</strong> 2001</p>
-                      <p><strong>Location:</strong> Near Channama Circle, Neeligin Road, Hubli</p>
-                      <p><strong>Payment Mode:</strong> Cash</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-
-  <!-- end about section -->
-
-  <!-- info section -->
-  <section class="info_section ">
-
-    <div class="container">
-      <div class="contact_nav">
-        <a href="">
-          <i class="fa fa-phone" aria-hidden="true"></i>
-          <span>
-            📞 Call : +91 996252207
-          </span>
-        </a>
-        <a href="">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-          <span>
-            📧 Email : info@yadavstones.com
-          </span>
-        </a>
-        <a href="">
-          <i class="fa fa-map-marker" aria-hidden="true"></i>
-          <span>
-            📍 Neeligin Road, Hubli
-          </span>
-        </a>
-      </div>
-      
-
-      <div class="info_top ">
-        <div class="row info_main_row">
-          <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="info_links">
-              <h4>
-                QUICK LINKS
-              </h4>
-              <div class="info_links_menu">
-                <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="" href="service.html">Services</a>
-                <a class="" href="about.html"> About</a>
-                <a class="" href="project.html">Project</a>
-                <a class="" href="testimonial.html">Testimonial</a>
-                <a class="" href="contact.html">Contact Us</a>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
-            <div class="info_post">
-              <h5>
-                INSTAGRAM FEEDS
-              </h5>
-              <div class="post_box">
-                <div class="img-box">
-                  <img src="../static/images/instagram.jpg" alt="">
-                </div>
-                <div class="img-box">
-                  <img src="../static/images/instagram.jpg" alt="">
-                </div>
-                <div class="img-box">
-                  <img src="../static/images/instagram.jpg" alt="">
-                </div>
-                <div class="img-box">
-                  <img src="../static/images/instagram.jpg" alt="">
-                </div>
-                <div class="img-box">
-                  <img src="../static/images/instagram.jpg" alt="">
-                </div>
-                <div class="img-box">
-                  <img src="../static/images/instagram.jpg" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="info_form">
-              <h4>
-                SIGN UP TO GET WEEKLY UPDATES
-              </h4>
-              <form action="">
-                <input type="text" placeholder="Enter Your Email" />
-                <button type="submit">
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="info_bottom">
-        <div class="row">
-          <div class="col-md-2">
-            <div class="info_logo">
+            <div class="contact_nav">
               <a href="">
-                <img src="images/logo.jpg" alt="">
+                <span> 📞 Call : +91 996252207 </span>
+              </a>
+              <a href="">
+                <span> 📧 Email : info@yadavstones.com </span>
+              </a>
+              <a href="">
+                <span> 📍 Neeligin Road, Hubli </span>
               </a>
             </div>
-          </div>
-          <div class="col-md-4 ml-auto">
             <div class="social_box">
               <a href="">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -386,47 +233,392 @@
             </div>
           </div>
         </div>
+        <div class="header_bottom">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+              <a class="navbar-brand" href="{% url 'index' %}">
+                <img
+                  src="{% static 'images/logo.jpg' %}"
+                  alt="Yadav Stones Logo"
+                />
+              </a>
 
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class=""> </span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'services' %}">Services</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'about' %}"
+                      >About <span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'project' %}">Project</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'testimonial' %}"
+                      >Gallery</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- end header section -->
+    </div>
+
+    <!-- about section -->
+    <section class="about_section layout_padding">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-12">
+            <div class="detail-box first-slide">
+              <div class="heading_container text-center">
+                <img
+                  src="{% static 'images/logo.jpg' %}"
+                  alt="Yadav Stones Logo"
+                  class="company-logo"
+                />
+                <h1 class="main-title">Yadav Stones</h1>
+                <div class="title-divider"></div>
+              </div>
+              <div class="about-content">
+                <p class="lead-text">
+                  Established in 2001, Yadav Stones has grown to become a
+                  premier manufacturer of construction materials in Hubli,
+                  Karnataka. Located strategically on Neeligin Road near
+                  Channama Circle, we specialize in high-quality crushed stone,
+                  cement blocks, and stone base solutions for both local and
+                  regional clients.
+                </p>
+                <p>
+                  With over two decades of industry experience, we've built a
+                  reputation for reliability and quality. Our 7+ acre mining
+                  facility operates with full regulatory compliance, holding all
+                  necessary licenses including LE-3 and LE-10 magazine licenses
+                  for explosive material storage, along with approvals from DGMS
+                  (Directorate General of Mining Safety) and KSPCB (Karnataka
+                  State Pollution Control Board).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row stats-row">
+          <div class="col-md-3 stat-item">
+            <div class="stat-card">
+              <i class="fa fa-certificate stat-icon"></i>
+              <h3>Fully Licensed</h3>
+              <p>DGMS & KSPCB Approved</p>
+            </div>
+          </div>
+          <div class="col-md-3 stat-item">
+            <div class="stat-card">
+              <i class="fa fa-map stat-icon"></i>
+              <h3>7+ Acres</h3>
+              <p>Mining Area</p>
+            </div>
+          </div>
+          <div class="col-md-3 stat-item">
+            <div class="stat-card">
+              <i class="fa fa-industry stat-icon"></i>
+              <h3>4-Stage Plant</h3>
+              <p>With VSI M-Sand Technology</p>
+            </div>
+          </div>
+          <div class="col-md-3 stat-item">
+            <div class="stat-card">
+              <i class="fa fa-truck stat-icon"></i>
+              <h3>Own Fleet</h3>
+              <p>Dedicated Transport</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <div class="detail-box slide-right">
+              <h2 class="section-title">Our Operations</h2>
+
+              <div class="compliance-badge">
+                <h4>
+                  <i class="fa fa-check-circle text-success"></i> Crushing &
+                  Mining
+                </h4>
+                <p>
+                  Licensed under LE-3 & LE-10 for explosive material storage and
+                  usage in quarry mining operations
+                </p>
+              </div>
+
+              <div class="compliance-badge">
+                <h4>
+                  <i class="fa fa-check-circle text-success"></i> Regulatory
+                  Approvals
+                </h4>
+                <p>
+                  Fully compliant with DGMS safety standards and KSPCB pollution
+                  control norms
+                </p>
+              </div>
+
+              <div class="operation-item">
+                <h4>
+                  <i class="fa fa-cogs text-primary"></i> Advanced Manufacturing
+                </h4>
+                <p>
+                  Our 4-stage pressure plant features state-of-the-art VSI
+                  (Vertical Shaft Impactor) technology for producing premium
+                  quality M-Sand and construction aggregates.
+                </p>
+              </div>
+
+              <div class="operation-item">
+                <h4>
+                  <i class="fa fa-road text-primary"></i> Strategic Logistics
+                </h4>
+                <p>
+                  With our own fleet of vehicles and crushers strategically
+                  located between 4-6 plants, we ensure efficient operations and
+                  timely deliveries.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="detail-box slide-left-again">
+              <h2 class="section-title">Core Products</h2>
+
+              <div class="commitment-item">
+                <h4>
+                  <i class="fa fa-cube text-warning"></i> Crushed Stone
+                  Manufacturing
+                </h4>
+                <p>
+                  Premium quality aggregates in various sizes for all
+                  construction needs
+                </p>
+              </div>
+
+              <div class="commitment-item">
+                <h4>
+                  <i class="fa fa-cube text-warning"></i> Cement Block
+                  Production
+                </h4>
+                <p>
+                  Durable and precisely manufactured building blocks meeting
+                  industry standards
+                </p>
+              </div>
+
+              <div class="commitment-item">
+                <h4>
+                  <i class="fa fa-cube text-warning"></i> Stone Base Solutions
+                </h4>
+                <p>
+                  High-quality foundation materials for roads and construction
+                  projects
+                </p>
+              </div>
+
+              <div class="commitment-item">
+                <h4>
+                  <i class="fa fa-cube text-warning"></i> Byproducts for Brick
+                  Industry
+                </h4>
+                <p>
+                  Supplying quality materials to support local brick
+                  manufacturing
+                </p>
+              </div>
+
+              <div class="business-details mt-4">
+                <h4 class="details-title">Business Information</h4>
+                <p><strong>Established:</strong> 2001</p>
+                <p>
+                  <strong>Location:</strong> Near Channama Circle, Neeligin
+                  Road, Hubli
+                </p>
+                <p><strong>GSTIN:</strong> 29AABFY2732JIZX</p>
+                <p><strong>Annual Turnover:</strong> ₹5-10 Lakh</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- end about section -->
 
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="./index.html">Pro Practical Tech Solutions</a>
-      </p>
-    </div>
-  </footer>
-  <!-- footer section -->
+    <!-- info section -->
+    <section class="info_section">
+      <div class="container">
+        <div class="contact_nav">
+          <a href="">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span> 📞 Call : +91 996252207 </span>
+          </a>
+          <a href="">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span> 📧 Email : info@yadavstones.com </span>
+          </a>
+          <a href="">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <span> 📍 Neeligin Road, Hubli </span>
+          </a>
+        </div>
 
-<!-- jQuery -->
-<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+        <div class="info_top">
+          <div class="row info_main_row">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="info_links">
+                <h4>QUICK LINKS</h4>
+                <div class="info_links_menu">
+                  <a class="" href="{% url 'index' %}">Home</a>
+                  <a class="" href="{% url 'services' %}">Services</a>
+                  <a class="" href="{% url 'about' %}">About</a>
+                  <a class="" href="{% url 'project' %}">Project</a>
+                  <a class="" href="{% url 'testimonial' %}">Gallery</a>
+                  <a class="" href="{% url 'contact' %}">Contact Us</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+              <div class="info_post">
+                <h5>INSTAGRAM FEEDS</h5>
+                <div class="post_box">
+                  <div class="img-box">
+                    <img src="{% static 'images/instagram.jpg' %}" alt="" />
+                  </div>
+                  <div class="img-box">
+                    <img src="{% static 'images/instagram.jpg' %}" alt="" />
+                  </div>
+                  <div class="img-box">
+                    <img src="{% static 'images/instagram.jpg' %}" alt="" />
+                  </div>
+                  <div class="img-box">
+                    <img src="{% static 'images/instagram.jpg' %}" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="info_form">
+                <h4>SIGN UP TO GET WEEKLY UPDATES</h4>
+                <form action="">
+                  <input type="text" placeholder="Enter Your Email" />
+                  <button type="submit">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info_bottom">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="info_logo">
+                <a href="{% url 'index' %}">
+                  <img
+                    src="{% static 'images/logo.jpg' %}"
+                    alt="Yadav Stones Logo"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 ml-auto">
+              <div class="social_box">
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- Popper JS -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-  crossorigin="anonymous">
-</script>
+    <!-- footer section -->
+    <footer class="footer_section">
+      <div class="container">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <a href="{% url 'index' %}">Yadav Stones</a>
+        </p>
+      </div>
+    </footer>
+    <!-- footer section -->
 
-<!-- Bootstrap JS -->
-<script src="{% static 'js/bootstrap.js' %}"></script>
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
 
-<!-- Owl Carousel -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Popper JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
 
-<!-- OwlCarousel2 Filter -->
-<script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
 
-<!-- Custom JS -->
-<script src="{% static 'js/custom.js' %}"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-<!-- Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <!-- OwlCarousel2 Filter -->
+    <script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>
 
+    <!-- Custom JS -->
+    <script src="{% static 'js/custom.js' %}"></script>
 
-</body>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
 
+    <script>
+      // Animation Trigger
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(
+          ".first-slide, .slide-right, .slide-left-again"
+        );
+
+        elements.forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add("show");
+          }, 300 * index);
+        });
+      });
+    </script>
+  </body>
 </html>
